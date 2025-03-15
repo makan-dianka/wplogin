@@ -1,0 +1,13 @@
+body {
+    background-color: whitesmoke;
+}
+
+.login-form {
+    border: 1px gray solid;
+    padding: 35px;
+    background-color: white;
+}
+
+.connexion-btn {
+    float: right;
+}

@@ -1,0 +1,10 @@
+.venv
+db.sqlite3
+
+secret_keys
+
+wplogin/__pycache__
+
+loginpage/__pycache__
+loginpage/migrations/__pycache__
+
