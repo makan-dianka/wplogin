@@ -12,20 +12,43 @@
   </head>
   <body>
     <div class="container-fluid">
-        <div class="row row-cols-5 d-flex justify-content-center align-items-center">
-            <div class="mt-5 login-form">
-                <form action="" method="post">
-                    <label for="username">Identifiant ou adresse e-mail</label>
-                    <input type="text" class="form-control form-control-lg">
-                    <br />
-                    <label for="password">Mot de passe</label>
-                    <input type="password" class="form-control form-control-lg">
-                
-                    <br />
-                    <span>se souvenir de moi</span>
-                    <input type="button" class="btn btn-primary connexion-btn" value="Se connecter">
-                </form>
-            </div>
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-3 mt-5 wp-logo">
+            <img src="{% static 'img/wplogo2.webp' %}" alt="wp logo" width="180" height="180">
+            <form action="" method="post" class="login-form"> {% csrf_token %}
+              <label for="username">Identifiant ou adresse e-mail</label>
+              <input type="text" id="username" class="form-control form-control-lg">
+              <br />
+              <label for="password">Mot de passe</label>
+              <input type="password" id="password" class="form-control form-control-lg">
+
+              <br />
+              <input type="checkbox" name="" id="">
+              <span>se souvenir de moi</span>
+              <input type="submit" class="btn btn-primary connexion-btn" value="Se connecter">
+          </form>
+          <div class="under-menu">
+            <span class="pwd-forgot">Mot de passe oublié ?</span>
+            <p class="back">← Aller sur VEO Location de véhicules</p>
+            <p class="policy"><a href="#">Politique de confidentialité</a></p>
+
+            <label for="lang">
+              <img src="{% static 'img/translate-icon.png' %}" alt="favicon" srcset="" width="20px" height="20px">
+            </label>
+            <select id="lang">
+              <option value="en_US">English (United States)</option>
+              <option value="de_DE">Deutsch</option>
+              <option value="es_ES">Español</option>
+              <option value="fr_FR" selected>Français</option>
+              <option value="it_IT">Italiano</option>
+              <option value="nl_NL">Nederlands</option>
+            </select>
+          </div>
+
+
+          </div>
+          <div class="col-md-4"></div>
         </div>
     </div>
   </body>

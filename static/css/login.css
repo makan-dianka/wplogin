@@ -11,3 +11,23 @@ body {
 .connexion-btn {
     float: right;
 }
+
+.wp-logo img{
+    margin-left: 110px;
+}
+
+.under-menu {
+    font-size: smaller;
+    padding: 25px;
+}
+
+.under-menu .back {
+    margin-top: 25px;
+}
+
+.under-menu .policy {
+    margin-top: 45px;
+    margin-left: 125px;
+    text-decoration: underline;
+    margin-bottom: 35px;
+}
