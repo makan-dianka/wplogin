@@ -16,15 +16,23 @@
         <div class="col-md-4"></div>
         <div class="col-md-3 mt-5 wp-logo">
             <img src="{% static 'img/wplogo2.webp' %}" alt="wp logo" width="180" height="180">
+            {% if messages %}
+              <div class="msg-error">
+                {% for message in messages %}
+                  <p class="alert">{{ message }}</p>
+                {% endfor %}
+              </div>
+              {% endif %}
+
             <form action="" method="post" class="login-form"> {% csrf_token %}
               <label for="username">Identifiant ou adresse e-mail</label>
-              <input type="text" id="username" class="form-control form-control-lg">
+              <input type="text" id="username" name="username" class="form-control form-control-lg">
               <br />
               <label for="password">Mot de passe</label>
-              <input type="password" id="password" class="form-control form-control-lg">
+              <input type="password" id="password" name="password" class="form-control form-control-lg">
 
               <br />
-              <input type="checkbox" name="" id="">
+              <input type="checkbox" name="checkbox" id="checkbox">
               <span>se souvenir de moi</span>
               <input type="submit" class="btn btn-primary connexion-btn" value="Se connecter">
           </form>
