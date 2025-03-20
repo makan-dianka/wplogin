@@ -31,3 +31,8 @@ body {
     text-decoration: underline;
     margin-bottom: 35px;
 }
+
+.msg-error p{
+    background-color: white;
+    border-left: red solid 3px;
+}
