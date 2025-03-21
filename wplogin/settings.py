@@ -2,6 +2,7 @@ from django.core.management.utils import get_random_secret_key
 from pathlib import Path
 import os
 import dotenv
+import json
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +21,6 @@ def get_secret_key(filename):
 
 
 SECRET_KEY = get_secret_key('secret_keys')
-
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -130,6 +130,16 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+
+def json_parser(filename):
+    if os.path.exists(filename) == False:
+        raise FileNotFoundError(f"Erreur : {filename} does not exist")
+
+    with open(filename, encoding='utf-8') as json_file:
+        data = json.load(json_file)
+        return data
+conf = json_parser(BASE_DIR / 'conf.json')
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
@@ -139,3 +149,7 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 # send message to :
 RECIPIENT = os.environ.get('RECIPIENT')
+
+# wp info
+
+TARGET_URL = conf['url']

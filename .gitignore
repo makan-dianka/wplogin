@@ -1,6 +1,7 @@
 .venv
 db.sqlite3
 .env
+conf.json
 
 secret_keys
 
