@@ -21,6 +21,18 @@ EMAIL_HOST_PASSWORD="gmail token"
 RECIPIENT="recipient email"
 ```
 
+## Create conf.json file
+
+```
+sudo nano conf.json
+```
+
+add those values
+
+```
+TARGET_URL=
+```
+
 ## create virtualenv and activate
 
 ```
