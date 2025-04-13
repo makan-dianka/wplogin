@@ -9,7 +9,6 @@ from django.template.loader import render_to_string
 
 
 def login(request):
-    print(settings.TARGET_URL)
     if request.method=="POST":
 
         login = Login()
