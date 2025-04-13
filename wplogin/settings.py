@@ -28,6 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+if DEBUG==False:
+    HOSTS = os.environ["ALLOWED_HOSTS"].split(',')
+    ALLOWED_HOSTS.extend(HOSTS)
+
 
 # Application definition
 
