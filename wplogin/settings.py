@@ -24,7 +24,7 @@ SECRET_KEY = get_secret_key('secret_keys')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(int(os.environ["DEBUG"]))
 
 ALLOWED_HOSTS = []
 
