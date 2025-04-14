@@ -19,6 +19,10 @@ EMAIL_HOST_USER="gmail"
 EMAIL_HOST_PASSWORD="gmail token"
 
 RECIPIENT="recipient email"
+
+DEBUG=0
+
+ALLOWED_HOSTS="192.168.1.42,127.0.0.1"
 ```
 
 ## Create conf.json file
