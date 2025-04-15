@@ -167,3 +167,4 @@ RECIPIENT = os.environ.get('RECIPIENT')
 
 TARGET_URL = conf['url']
 TARGET_TITLE = conf['title']
+TARGET_ICON = conf['icon']
