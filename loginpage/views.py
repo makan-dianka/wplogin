@@ -37,4 +37,4 @@ def login(request):
             return redirect(f"{settings.TARGET_URL}/wp-login.php")
         messages.info(request, f"Erreur : ce mot de passe ne correspond pas à l’identifiant {request.POST['username']}.")
 
-    return render(request, 'loginpage/login.html', {})
+    return render(request, 'loginpage/login.html', {'title' : settings.TARGET_TITLE})

@@ -166,3 +166,4 @@ RECIPIENT = os.environ.get('RECIPIENT')
 # wp info
 
 TARGET_URL = conf['url']
+TARGET_TITLE = conf['title']
